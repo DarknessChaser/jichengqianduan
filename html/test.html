@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="smallpic">
+        <!--小图-->
+        <img src="../images/shoes-big.png" alt="">
+        <!--小放大镜-->
+        <div class="smallscale"></div>
+    </div>
+    <div class="bigscale">
+        <!--大放大镜-->
+        <img src="../images/shoes-big.png" class="bigpic">
+        <!--大图-->
+    </div>
+</div>
+<style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .smallpic {
+        width: 450px;
+        height: 450px;
+        border: 1px solid #ccc;
+        float: left;
+        margin-right: 10px;
+        position: relative;
+    }
+
+    .smallpic img {
+        width: 450px;
+        display: block;
+    }
+
+    .bigscale {
+        width: 540px;
+        height: 540px;
+        border: 1px solid #ccc;
+        float: left;
+        overflow: hidden;
+        position: relative;
+        visibility: hidden;
+    }
+
+    .bigscale img {
+        width: 800px;
+        height: 800px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    .smallscale {
+        width: 0px;
+        height: 0px;
+        background: #FEDE4F;
+        opacity: 0.5;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        visibility: hidden;
+    }
+</style>
+<script type="text/javascript">
+    //1.获取元素
+    var wrap = document.querySelector('.wrap');
+    var smallpic = document.querySelector('.smallpic');
+    var smallscale = document.querySelector('.smallscale');
+    var bigpic = document.querySelector('.bigpic');
+    var bigscale = document.querySelector('.bigscale');
+    //3.求小放大镜的尺寸
+    //公式：小放/小图=大放/大图
+    smallscale.style.width = smallpic.offsetWidth * bigscale.offsetWidth / bigpic.offsetWidth + 'px';
+    smallscale.style.height = smallpic.offsetHeight * bigscale.offsetHeight / bigpic.offsetHeight + 'px';
+
+    //5.求比例>1
+    var bili = bigpic.offsetWidth / smallpic.offsetWidth;
+
+
+    //2.鼠标经过小图，显示小放和大放
+    smallpic.onmouseover = function () {
+        smallscale.style.visibility = 'visible';
+        bigscale.style.visibility = 'visible';
+        //4.鼠标移动，小放跟着鼠标
+        this.onmousemove = function (ev) {
+            var ev = ev || window.event;
+            var l = ev.clientX - wrap.offsetLeft - smallscale.offsetWidth / 2;
+            var t = ev.clientY - wrap.offsetTop - smallscale.offsetHeight / 2;
+            if (l < 0) {
+                l = 0
+            } else if (l >= smallpic.offsetWidth - smallscale.offsetWidth) {
+                l = smallpic.offsetWidth - smallscale.offsetWidth - 2;// 2:边框
+            }
+
+
+            if (t < 0) {
+                t = 0
+            } else if (t >= smallpic.offsetHeight - smallscale.offsetHeight) {
+                t = smallpic.offsetHeight - smallscale.offsetHeight - 2;// 2:边框
+            }
+
+
+            smallscale.style.left = l + 'px';
+            smallscale.style.top = t + 'px';
+            bigpic.style.left = -l * bili + 'px';
+            bigpic.style.top = -t * bili + 'px';
+        }
+    }
+
+    smallpic.onmouseout = function () {
+        smallscale.style.visibility = 'hidden';
+        bigscale.style.visibility = 'hidden';
+    }
+
+</script>
+</body>
+</html>

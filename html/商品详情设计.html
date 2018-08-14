@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../js/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+    <link href="../js/bootstrap-touchspin/bootstrap.touchspin.css" rel="stylesheet" type="text/css" />
+    <!--点击变换数字-->
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="top-section" id="top">
+	<div class="container">
+		<div class="top-left pull-left">
+			<div class="logo clearfix">
+				<img src="../images/logo.png" />
+				<span>慕祺定制</span>
+			</div>
+			<p class="logo-url">www.muqidz.com</p>
+		</div>
+		<div class="top-center pull-left">
+			<div class="clearfix">
+				<div class="top-center-left pull-left">
+					<div class="select-city pull-left">
+						<input type="text" value="南京市[选择城市]" size="15" id="getcity_name" name="getcity_name" mod="address|notice" mod_address_source="hotel" mod_address_suggest="@Beijing|北京|53@Shanghai|上海|321@Shenzhen|深圳|91@Guangzhou|广州|80@Qingdao|青岛|292@Chengdu|成都|324@Hangzhou|杭州|383@Wuhan|武汉|192@Tianjin|天津|343@Dalian|大连|248@Xiamen|厦门|61@Chongqing|重庆|394@" mod_address_reference="getcityid" />
+						<input id="getcityid" name="getcityid" type="hidden" value="{$getcityid}" />
+					</div>
+					<div id="jsContainer" class="jsContainer" style="height:0">
+					    <div id="tuna_alert" style="display:none;position:absolute;z-index:999;overflow:hidden;"></div>
+					    <div id="tuna_jmpinfo" style="visibility:hidden;position:absolute;z-index:120;"></div>
+					</div>
+					<div class="top-login pull-left"><span class="cutline">|</span>欢迎来到极成，请<a data-toggle="modal" href="#myModal">登录</a>/<a data-toggle="modal" href="#myModalRegister">免费注册</a></div>
+				</div>
+				<div class="top-center-right pull-right">
+					<a href="#">我的订单</a>
+					<a href="#">购物车</a>				
+					<a href="#" class="myaccount-btn">我的账户</a>
+					<div class="myaccount-content">						
+						<span class="bot"></span>  
+						<span class="top"></span>  
+						<a href="#">消息中心</a>
+						<a href="#">我的订单</a>
+						<a href="#">企业入驻</a>
+						<a href="#">网站帮助</a>						
+					</div>
+				</div>
+			</div>
+			<div class="search-box clearfix">
+				<select class="bs-select form-control">
+					<option>商品</option>
+					<option>店铺</option>
+				</select>  
+				<input type="text" placeholder="输入搜索内容" />
+				<button class="btn search-btn">搜索</button>
+			</div>
+		</div>
+		<div class="top-right pull-left">
+			<div class="code-box pull-left text-center">
+				<img src="../images/code.png" />
+				<p>关注微信</p>
+			</div>
+			<div class="code-box pull-right text-center">
+				<img src="../images/code.png" />
+				<p>扫码下载APP</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="menu-section">
+		<ul class="container clearfix">
+			<li>
+				<a href="/" class="red-text">首页</a>
+			</li>
+			<li>
+				<a href="index02.html" class="red-text sub-menu-btn">服装服饰定制商城</a>
+				<ul class="sub-menu">
+					<li class="container">
+						<ul>
+							<li><a href="#">男装</a></li>
+							<li><a href="#">女装</a></li>
+					        <li><a href="#">中老年</a></li>
+					        <li><a href="#">童装</a></li>
+						</ul>						
+					</li>					
+				</ul>
+			</li>
+			<li><a href="#">家具家装定制商城</a></li>
+			<li><a href="#">智能电器定制商城</a></li>
+			<li><a href="#">企业定制服务</a></li>
+			<li><a href="#">质量公告</a></li>
+			<li><a href="#">新闻资讯</a></li>
+		</ul>		
+</div>
+<div class="main-content">
+	<div class="container">
+		<div class="mall">
+			<div class="mall-custom">
+				<span>极成定制商品</span>
+				<i class="glyphicon glyphicon-menu-right"></i>
+				<span>企业服装服饰定制</span>
+				<i class="glyphicon glyphicon-menu-right"></i>
+				<span>女装</span>
+				<i class="glyphicon glyphicon-menu-right"></i>
+				<b>90分银离子抗菌T恤混色两件套</b>
+			</div>
+			<div class="shoes">
+				<div class="detail-left-box pull-left">
+                    <div class="exp-pic">
+                        <div class="show">
+                            <div class="item clearfix">
+                                <a class="big-photo">
+                                    <img src="../images/shoes-big.png" alt="big"/>
+                                </a>
+                                <a class="des-small">
+                                    <img src="../images/shoes-big.png" alt="small"/>
+                                </a>
+                                <a class="des-small">
+                                    <img src="../images/detail_pic01.png" alt="small"/>
+                                </a>
+                                <a class="des-small">
+                                    <img src="../images/detail_pic02.png" alt="small"/>
+                                </a>
+                                <a class="des-small">
+                                    <img src="../images/detail_pic03.png" alt="small"/>
+                                </a>
+                                <a class="des-small">
+                                    <img src="../images/detail_pic04.png" alt="small"/>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="enjoy">
+                            <a href="" class="star">
+                                <img src="../images/star.png" alt="" class="star1"><span>收藏商品</span>
+                            </a>
+                            <a href="" class="en">
+                                <img src="../images/enjoy.png" alt="" class='enjoy1'>
+                                <span>分享</span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="exp-shoes">
+                        <h4>丝感雪花扣高跟鞋</h4>
+						<h5>闪烁星光，女人必备的 “战鞋”,这里简介最长两百字，最长到这里就要换行，这部分内容距左右的间距40px</h5>
+                        <div class="type no-padding">
+                                <div class="color">颜色：</div>
+                                <div class="all-pic">
+                                    <a href="#"><img src="../images/shoes-black.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-grey.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-light.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-red.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-orange.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-purple.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-lightblue.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-blue.png" alt=""></a>
+                                    <a href="#"><img src="../images/shoes-pink.png" alt=""></a>
+                                    <a href="#"><img src="../images/space.png" alt=""></a>
+                                </div>
+                          </div>
+                          <div class="material">
+							<i>材质：</i>
+							<div class="all-mater">
+								<a href="#" class="active"><span>莫代尔</span></a>
+								<a href="#"><span>蚕丝</span></a>
+								<a href="#"><span>植绒</span></a>
+								<a href="#"><span>羊毛</span></a>
+								<a href="#"><span>欧根纱</span></a>
+								<a href="#"><span>天鹅绒</span></a>
+								<a href="#"><span>灯芯绒</span></a>
+								<a href="#"><span>绵绸</span></a>
+								<a href="#"><span>蕾丝</span></a>
+								<a href="#"><span>聚酯纤维</span></a>
+							</div>
+						</div>
+						<div class="spec">
+                                <i>规格：</i>
+                                <div class="all-spec clearfix">
+                                    <a href="#" class="active"><span>35</span></a>
+                                    <a href="#"><span>36</span></a>
+                                    <a href="#"><span>37</span></a>
+                                    <a href="#"><span>38</span></a>
+                                    <a href="#"><span>39</span></a>
+                                    <a href="#"><span>40</span></a>
+                                    <a href="#"><span>41</span></a>
+                                    <a href="#"><span>42</span></a>
+                                    <a href="#"><span>43</span></a>
+                                    <a href="#"><span>44</span></a>
+                                </div>
+                         </div>
+                         <div class="custom-made">
+							<i>设计：</i>
+							<div class="made-price">
+								<span class="cost">---</span>
+								<span class="cost-price">定制￥239</span>
+								<span class="made-number">累计销量 498</span>
+								<p>基于本商品提供个性设计，点击“立即设计”填写订单，可在下一步备注中说明您的想法，同时可上传草图价格及其他问题请联系客服。</p>
+							</div>
+						</div>
+						<div class="num">
+                                <span class="amount">数量：</span>
+                                <div class="num-box">
+                                    <input class="touchspin_5" type="text" value="1" name="demo3_21">
+                                </div>
+	                            <span class="stock">库存：
+									<i class="quantity">999</i>
+								</span>
+                         </div>
+                         <div class="serv">
+							<i>服务：</i>
+							<div class="serv-select">							
+								<label class="serv-way">咨询服务<input type="radio" name="ser"></label>
+								<label class="serv-way">门店服务<input type="radio" name="ser"></label>
+								<label class="serv-way">上门服务<input type="radio" name="ser"></label>
+							</div>
+						</div>
+                         <div class='mode mo send-box clearfix'>
+                                <i>配送：</i>
+                                <div class="address-select"><input class="input" name="" id="city" type="text" placeholder="请选择" autocomplete="off" readonly="true"/><s></s></div>                                
+                                <div class="get-box pull-left">
+                                		<label class="way">门店自取 <input type="radio" name="way"></label>
+									<label class="way">快递邮寄 <input type="radio" name="way"></label>
+                                </div>                              
+                          </div>   
+                          <div class="btn1 btn-buy">
+                                <button class="buy">立即设计</button>
+							
+                           </div>                        
+                    </div>
+                </div>
+				<div class="custom pull-left">
+					<img src="../images/custom.png" alt="" class="custom-pic">
+					<div class="shop-mall">
+						<h4>极成定制商城</h4>
+						<p class="clearfix"><span>店铺总分：</span><span class="total">5.00分</span></p>
+						<p class="clearfix"><span>所在地：</span><span class="location">江苏省 南京市</span></p>
+						<p class="clearfix"><span>联系：</span><a class="service" href="#">联系客服  <i class="glyphicon glyphicon-headphones"></i></a></p>
+						<div class="line"></div>	
+					</div>
+					<div class="compare">
+						<div class="detail">
+							<p>评价明细</p>
+							<p>商品<span>5.0</span></p>
+							<p>服务<span>5.0</span></p>
+							<p>效率<span>5.0</span></p>
+						</div>
+						<div class="peer">
+							<p>比价同行</p>
+							<p>48%<span class="glyphicon glyphicon-arrow-up"></span></p>
+							<p>51%<span class="glyphicon glyphicon-arrow-up"></span></p>
+							<p>39%<span class="glyphicon glyphicon-arrow-up"></span></p>
+						</div>
+						<div class="line line2"></div>
+					</div>
+					<div class="shop">
+						<button class="go-shop">进店逛逛</button>
+						<button class="follow">关注店铺</button>
+					</div>
+				</div>
+			</div>
+			<div class="recommend">
+				<div class="shopowner">店长推荐</div>
+				<div class="list-goods clearfix">
+					<div class="goods">
+						<img src="../images/list-pic-small1.png" alt="">
+						<p>￥299</p>
+						<h5>90分银离子抗菌T恤</h5>
+					</div>
+					<div class="goods">
+						<img src="../images/list-pic-small2.png" alt="">
+						<p>￥299</p>
+						<h5>90分银离子抗菌T恤</h5>
+					</div>
+					<div class="goods">
+						<img src="../images/list-pic-small3.png" alt="">
+						<p>￥299</p>
+						<h5>90分银离子抗菌T恤</h5>
+					</div>
+					<div class="goods">
+						<img src="../images/list-pic-small4.png" alt="">
+						<p>￥299</p>
+						<h5>90分银离子抗菌T恤</h5>
+					</div>
+					<div class="goods">
+						<img src="../images/list-pic-small5.png" alt="">
+						<p>￥299</p>
+						<h5>90分银离子抗菌T恤</h5>
+					</div>
+					<div class="goods">
+						<img src="../images/list-pic-small6.png" alt="">
+						<p>￥299</p>
+						<h5>90分银离子抗菌T恤</h5>
+					</div>
+				</div>			
+				
+			</div>
+			<div class="product-detail-box clearfix">
+					<div class="bs-example bs-example-tabs introduction" data-example-id="togglable-tabs">
+			    <ul id="myTabs" class="nav nav-tabs" role="tablist">
+			      <li role="presentation" class="active"><a href="#tab01" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">商品介绍</a></li>
+			      <li role="presentation"><a href="#tab02" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">规格及包装</a></li>   
+			      <li role="presentation"><a href="#tab03" role="tab" id="profile-tab" data-toggle="tab" aria-controls="tab03">评价（999+）</a></li>
+			    </ul>
+			    <div id="myTabContent" class="tab-content">
+			      <div role="tabpanel" class="tab-pane fade in active" id="tab01" aria-labelledby="home-tab">
+			        <div class="product-detail">
+			        		<div class="product-detail-list clearfix">
+			        			<div class="product-detail-left pull-left">
+			        				<label>材质</label>
+			        				<div>漆皮</div>
+			        			</div>
+			        			<div class="product-detail-left pull-left">
+			        				<label>适用人群</label>
+			        				<div>女士</div>
+			        			</div>
+			        		</div>
+			        		<div class="product-detail-list clearfix">
+			        			<label>是否包含化学物质</label>
+			        			<div class="m-space">否</div>
+			        		</div>
+			        		<div class="product-detail-list clearfix">
+			        			<label>风格</label>
+			        			<div>百搭、通勤、日韩</div>
+			        		</div>
+			        		<div class="product-detail-list clearfix">
+			        			<label>尺码</label>
+			        			<div>34（220），35（225），36（230），37（235），38（240），39（245），40（250）</div>
+			        		</div>
+			        		<div class="product-detail-list no-border clearfix">
+			        			<label>温馨提示</label>
+			        			<div class="cozy-text">
+								<span>1.选品属于贴身传达商品，在收到试穿时保持商品整洁，避免磨损，方便售后服务</span>
+								<span>2.材质特性，请不要擦拭保养，会影响光泽</span>
+								<span>3.不穿时请妥善包装，为避免角色转移，请与其他深色系类隔离</span>
+							</div>
+			        		</div>										
+								<img src="../images/list-pic1.png" alt="">
+								<img src="../images/list-pic2.png" alt="">
+								<img src="../images/list-pic3.png" alt="">
+								<img src="../images/list-pic4.png" alt="" class='end'>
+			        </div>
+			      </div>
+			      <div role="tabpanel" class="tab-pane fade" id="tab02" aria-labelledby="profile-tab">
+			        <p>02</p>
+			      </div>  
+			      <div role="tabpanel" class="tab-pane fade" id="tab03" aria-labelledby="profile-tab">
+			        <div>
+				        <div class="comment">
+				        	<div class="overall-merit">
+				        		<div class="left-evaluate">
+				        			<h5>综合评价</h5>
+				        			<h2>4.9分</h2>
+				        		</div>
+				        		<div class="right-evaluate">
+				        			<button class="all-btn">全部</button>
+				        			<button class="good-btn">好评</button>
+				        			<button class="review-btn">中评</button>
+				        			<button class="bad-btn">差评</button>
+				        			<button class="pic-btn">有图</button>
+				        		</div>
+				        	</div>
+				        	<div class="all-talk">
+				        		<div class="left-pic">
+					        		<div class="head-pic">
+					        			<img src="../images/pic-slist1.png" alt="">
+					        			<span>吉利</span>
+					        		</div>
+					        	</div>
+					        	<div class="right-inf">
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<span class="talk">适合任何类型的椅型吊床!</span>
+					        		<span class="time">2018-04-09 09:49</span>
+					        	</div>
+				        	</div>
+				        	<div class="all-talk">
+				        		<div class="left-pic">
+					        		<div class="head-pic">
+					        			<img src="../images/pic-slist2.png" alt="">
+					        			<span>皮特</span>
+					        		</div>
+					        	</div>
+					        	<div class="right-inf">
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<span class="talk">差评差评差评差评差评差评差评差评差评差评差评差评差评差评差评差评换行换行换行换行换行换行换行换行换行商家回复</span>
+					        		<span class="time ti">2018-04-09 09:49</span>
+					        		<span class="reply">极成定制商城 回复：</span>
+					        		<span class="reply-talk">尊敬的客户您好，本店所有产品都是正品保证，本店均享7天无理由退货，15天无理由退货，百分之百正品保证！您可以放心选购呦！祝您生活愉快！</span>
+					        		<span class='time'>2018-04-09 09:49</span>
+					        	</div>
+				        	</div>
+
+									<div class="all-talk">
+				        		<div class="left-pic">
+					        		<div class="head-pic">
+					        			<img src="../images/pic-slist1.png" alt="">
+					        			<span>吉利</span>
+					        		</div>
+					        	</div>
+					        	<div class="right-inf">
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<span class="talk">文字+图评论</span>
+					        		<div class="detail-pic">
+					        			<a class="small-photo">
+					        				<img src="../images/talk-list1.png" alt="talk-small">
+					        			</a>
+					        			<a class="small-photo">
+					        				<img src="../images/talk-list2.png" alt="talk-small">
+					        			</a>
+					        			<a class="small-photo">
+					        				<img src="../images/talk-list3.png" alt="talk-small">
+					        			</a>
+					        		</div>
+					        		<a class="big-photo-talk detail-big">
+					        			<img src="../images/big-pic.png" alt="talk-big" id='d-img'>
+					        			<button class="btn-x" id="btn">X</button>
+					        		</a>
+					        		<span class="time">2018-04-09 09:49</span>
+					        	</div>
+				        	</div>
+
+				        	<div class="all-talk">
+				        		<div class="left-pic">
+					        		<div class="head-pic">
+					        			<img src="../images/pic-slist2.png" alt="">
+					        			<span>皮特</span>
+					        		</div>
+					        	</div>
+					        	<div class="right-inf">
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<span class="talk">每页显示十条评论每页显示十条评论每页显示十条评论每页显示十条评论每页显示十条评论每页显示十条评论每页显示十条评论</span>
+					        		<span class="time ti">2018-04-09 09:49</span>
+					        		<span class="reply">极成定制商城 回复：</span>
+					        		<span class="reply-talk">尊敬的客户您好，本店所有产品都是正品保证，本店均享7天无理由退货，15天无理由退货，百分之百正品保证！您可以放心选购呦！祝您生活愉快！</span>
+					        		<span class='time'>2018-04-09 09:49</span>
+					        	</div>
+				        	</div>
+				        	<div class="all-talk">
+				        		<div class="left-pic">
+					        		<div class="head-pic">
+					        			<img src="../images/pic-slist1.png" alt="">
+					        			<span>吉利</span>
+					        		</div>
+					        	</div>
+					        	<div class="right-inf">
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<span class="talk">适合任何类型的椅型吊床!</span>
+					        		<span class="time">2018-04-09 09:49</span>
+					        	</div>
+				        	</div>
+				        	<div class="all-talk">
+				        		<div class="left-pic">
+					        		<div class="head-pic">
+					        			<img src="../images/pic-slist2.png" alt="">
+					        			<span>皮特</span>
+					        		</div>
+					        	</div>
+					        	<div class="right-inf">
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<span class="talk">差评差评差评差评差评差评差评差评差评差评差评差评差评差评差评差评换行换行换行换行换行换行换行换行换行商家回复</span>
+					        		<span class="time ti">2018-04-09 09:49</span>
+					        		<span class="reply">极成定制商城 回复：</span>
+					        		<span class="reply-talk">尊敬的客户您好，本店所有产品都是正品保证，本店均享7天无理由退货，15天无理由退货，百分之百正品保证！您可以放心选购呦！祝您生活愉快！</span>
+					        		<span class='time'>2018-04-09 09:49</span>
+					        	</div>
+				        	</div>
+				        	<div class="all-talk">
+				        		<div class="left-pic">
+					        		<div class="head-pic">
+					        			<img src="../images/pic-slist1.png" alt="">
+					        			<span>吉利</span>
+					        		</div>
+					        	</div>
+					        	<div class="right-inf">
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<span class="talk">适合任何类型的椅型吊床!</span>
+					        		<span class="time">2018-04-09 09:49</span>
+					        	</div>
+				        	</div>
+				        	<div class="all-talk">
+				        		<div class="left-pic">
+					        		<div class="head-pic">
+					        			<img src="../images/pic-slist2.png" alt="">
+					        			<span>皮特</span>
+					        		</div>
+					        	</div>
+					        	<div class="right-inf">
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<span class="talk">差评差评差评差评差评差评差评差评差评差评差评差评差评差评差评差评换行换行换行换行换行换行换行换行换行商家回复</span>
+					        		<span class="time ti">2018-04-09 09:49</span>
+					        		<span class="reply">极成定制商城 回复：</span>
+					        		<span class="reply-talk">尊敬的客户您好，本店所有产品都是正品保证，本店均享7天无理由退货，15天无理由退货，百分之百正品保证！您可以放心选购呦！祝您生活愉快！</span>
+					        		<span class='time'>2018-04-09 09:49</span>
+					        	</div>
+				        	</div>
+				        	<div class="all-talk">
+				        		<div class="left-pic">
+					        		<div class="head-pic">
+					        			<img src="../images/pic-slist1.png" alt="">
+					        			<span>吉利</span>
+					        		</div>
+					        	</div>
+					        	<div class="right-inf">
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<span class="talk">适合任何类型的椅型吊床!</span>
+					        		<span class="time">2018-04-09 09:49</span>
+					        	</div>
+				        	</div>
+				        	<div class="all-talk talk-end">
+				        		<div class="left-pic">
+					        		<div class="head-pic">
+					        			<img src="../images/pic-slist1.png" alt="">
+					        			<span>吉利</span>
+					        		</div>
+					        	</div>
+					        	<div class="right-inf">
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<i class="glyphicon glyphicon-star"></i>
+					        		<span class="talk">适合任何类型的椅型吊床!</span>
+					        		<span class="time">2018-04-09 09:49</span>
+					        	</div>
+				        	</div>
+				        </div>
+				        <div class="end-page">
+				        	<nav aria-label="Page navigation">
+									  <ul class="pagination">
+									    <li class="disabled">
+									      <a href="#" aria-label="Previous">
+									        <span aria-hidden="true">上一页</span>
+									      </a>
+									    </li>
+									    <li><a href="#" class="active">1</a></li>
+									    <li><a href="#">2</a></li>
+									    <li><a href="#">3</a></li>
+									    <li><a href="#">...</a></li>
+									    <li><a href="#">10</a></li>
+									    <li>
+									      <a href="#" aria-label="Next">
+									        <span aria-hidden="true">下一页</span>
+									      </a>
+									    </li>
+									  </ul>
+									  <span class="total">共10页 到第
+									  	<input type="number" class="inp1" placeholder="1">页
+								  		<a href=""><input type="text" class="inp2" placeholder="确定"></a>
+							  		</span>
+									</nav>
+				        </div> 
+			        </div>
+			      </div> 
+			    </div>
+			 	</div>					
+					<div class="inside-shop">
+					<div class="right-menu-box pull-left">
+						<ul>
+							<li><a href="javascript:void(0)" class="title">店内分类</a>
+							</li>		
+							<li><a href="javascript:void(0)" class="inactive">家居家纺</a>
+								<ul>
+									<li><a href="javascript:void(0)">菜单一</a></li> 
+									<li><a href="javascript:void(0)">菜单二</a></li> 
+								</ul>
+							</li>
+							<li><a href="javascript:void(0)" class="inactive">服装服饰</a>
+								<ul> 
+									<li><a href="javascript:void(0)">菜单一</a></li> 
+									<li><a href="javascript:void(0)">菜单二</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:void(0)" class="inactive">工匠定制</a>
+								<ul>
+									<li><a href="javascript:void(0)">菜单一</a></li> 
+									<li><a href="javascript:void(0)">菜单二</a></li> 
+								</ul>
+							</li>
+							<li><a href="javascript:void(0)" class="inactive inactives">智能电器</a>
+								<ul style="display: block;">
+									<li><a href="javascript:void(0)" class="active">智能电视</a></li> 
+									<li><a href="javascript:void(0)">安防</a></li> 
+									<li><a href="javascript:void(0)">路由器</a></li>
+									<li><a href="javascript:void(0)">网关</a></li>
+								</ul>
+							</li>			
+						</ul>
+					</div>
+					<div class="hot">
+						<p class="title">店铺热销产品</p>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">￥239</p>
+							<p class="ti">90分银离子抗菌T恤</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">￥239</p>
+							<p class="ti">90分银离子抗菌T恤</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">￥239</p>
+							<p class="ti">90分银离子抗菌T恤</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">￥239</p>
+							<p class="ti">90分银离子抗菌T恤</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">￥239</p>
+							<p class="ti">90分银离子抗菌T恤</p>
+						</div>
+					</div>
+					<div class="hot">
+						<p class="title">热门关注产品</p>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">￥239</p>
+							<p class="ti">90分银离子抗菌T恤</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">￥239</p>
+							<p class="ti">90分银离子抗菌T恤</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">￥239</p>
+							<p class="ti">90分银离子抗菌T恤</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">￥239</p>
+							<p class="ti">90分银离子抗菌T恤</p>
+							<p class="line"></p>
+						</div>
+						<div class="girl">
+							<img src="../images/girl.png" alt="">
+							<p class="pri">￥239</p>
+							<p class="ti">90分银离子抗菌T恤</p>
+						</div>
+					</div>
+				</div>
+			
+				</div>
+		</div>
+	</div>
+</div>
+<div class="bottom-section01">
+	<div class="container clearfix">
+		<div class="icon-text pull-left"><img src="../images/bottom_logo_pic.png" /></div>
+		<div class="pull-left icon-box-right">
+			<div class="icon-box pull-left clearfix">
+				<img src="../images/bottom_icon01.png" class="pull-left" />
+				<h1 class="pull-left"><span>安全</span><p>专业团队 安全省心</p></h1>
+			</div>
+			<div class="icon-box pull-left clearfix">
+				<img src="../images/bottom_icon02.png" class="pull-left" />
+				<h1 class="pull-left"><span>省钱</span><p>大牌直供 优选好物</p></h1>
+			</div>
+			<div class="icon-box pull-left clearfix">
+				<img src="../images/bottom_icon03.png" class="pull-left" />
+				<h1 class="pull-left"><span>方便</span><p>快捷高效 一键购物</p></h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bottom-section02">
+	<div class="container clearfix">
+		<div class="left-menu pull-left">
+			<div class="left-menu-list pull-left">
+				<h1>购物指南</h1>
+				<a href="#">购物流程</a>
+				<a href="#">用户协议</a>
+				<a href="#">会员规则</a>
+				<a href="#">订单状态</a>
+				<a href="#">常见问题</a>				
+			</div>
+			<div class="left-menu-list pull-left">
+				<h1>配送方式</h1>
+				<a href="#">快捷服务</a>
+				<a href="#">物流配送</a>
+				<a href="#">上门服务</a>
+				<a href="#">门店自取</a>			
+			</div>
+			<div class="left-menu-list pull-left">
+				<h1>支付方式</h1>
+				<a href="#">货到付款</a>
+				<a href="#">在线支付</a>
+				<a href="#">银行转账</a>
+				<a href="#">支票付款</a>			
+			</div>
+			<div class="left-menu-list pull-left">
+				<h1>售后服务</h1>
+				<a href="#">接收验货</a>
+				<a href="#">申请退款</a>
+				<a href="#">退换货规则</a>			
+			</div>
+		</div>
+		<div class="right-tel pull-right">
+			<div class="tel-box clearfix">
+				<h2 class="pull-left"><img src="../images/bottom_icon04.png" /></h2>
+				<h1 class="pull-left"><span>加盟热线(固话)</span><span>400-123-6789</span></h1>
+			</div>
+			<div class="tel-box clearfix">
+				<h2 class="pull-left"><img src="../images/bottom_icon05.png" /></h2>
+				<h1 class="pull-left">
+					<span>招商热线(手机)</span>
+					<span>曾先生：13998986666</span>
+					<span>朱先生：13998986666</span>
+					<span>朱先生：13998986666</span>
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bottom-section03">
+	<div class="container bottom-menu clearfix">
+		<a href="#">关于我们</a>
+		<span>|</span>
+		<a href="#">联系我们</a>
+		<span>|</span>
+		<a href="#">联系客服</a>
+		<span>|</span>
+		<a href="#">合作招商</a>
+		<span>|</span>
+		<a href="#">商家帮助</a>
+		<span>|</span>
+		<a href="#">友情链接</a>
+		<span>|</span>
+		<a href="#">商家入驻</a>
+	</div>
+	<p><span>增值电信业务经营许可证：浙 B2-20080224</span><span>互联网违法和不良信息举报电话：0571-81683755</span></p>
+	<p>Copyright © 2018-2047 极成定制商城版权所有 保留一切权利 ICP备案号：苏02-12345678号</p>
+	<p>公司地址：江苏省秦淮区弓箭坊020号</p>
+	<div class="link-img">
+		<div class="container text-center">
+			<a href="#"><img src="../images/bottom_link_pic01.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic02.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic03.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic04.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic05.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic06.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic07.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic08.png" /></a>
+		</div>
+	</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/top_menu.js"></script>
+<script src="../js/left_menu.js"></script>
+<!--下拉菜单-->
+<script src="../js/app.min.js"></script>
+<script src="../js/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="../js/components-bootstrap-select.min.js" type="text/javascript"></script>
+<!--下拉菜单-->
+<!--城市选择插件-->
+<script type="text/javascript" src="../js/fixdiv.js"></script>
+<script type="text/javascript" src="../js/address.js"></script>
+<!--城市选择插件-->
+<!--点击变换数字-->
+<script src="../js/bootstrap-touchspin/bootstrap.touchspin.js" type="text/javascript"></script>
+<script src="../js/components-bootstrap-touchspin.min.js" type="text/javascript"></script>
+<!--地址选择插件-->
+<script type="text/javascript" src="../js/address/Popt.js"></script>
+<script type="text/javascript" src="../js/address/city.json.js"></script>
+<script type="text/javascript" src="../js/address/citySet.js"></script>
+<!--地址选择插件-->
+<script type="text/javascript">
+    $(function() {
+        /** 更换小图片 */
+        $(".item a").hover(function(){
+            changeImg($(this))
+        });  
+//      地区选择
+$("#city").click(function (e) {
+	SelCity(this,e);
+});
+$("s").click(function (e) {
+	SelCity(document.getElementById("city"),e);
+});
+    });
+    function changeImg(obj){
+        if(obj.find("img").attr("alt")=="small"){
+            var temp_big_src = obj.siblings('a').find('img[alt=big]').attr('src');
+            var temp_big_url = obj.siblings('a[class=big-photo]').attr('href');
+            var temp_small_src = obj.find('img').attr('src');
+            var temp_small_url = obj.attr('href');
+            obj.siblings('a').find('img[alt=big]').attr('src',temp_small_src);
+        }
+    }
+    
+//  商品详情切换图片效果
+//  评价删除图片
+$(function(){
+	$("#btn").click(function() {
+  	$('#d-img').remove();
+  	$(this).remove();
+	}); 
+});
+</script>
+</body>
+</html>

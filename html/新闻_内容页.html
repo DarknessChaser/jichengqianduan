@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新闻</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../js/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/media.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="top-section" id="top">
+	<div class="container">
+		<div class="top-left pull-left">
+			<div class="logo clearfix">
+				<img src="../images/logo.png" />
+				<span>慕祺定制</span>
+			</div>
+			<p class="logo-url">www.muqidz.com</p>
+		</div>
+		<div class="top-center pull-left">
+			<div class="clearfix">
+				<div class="top-center-left pull-left">
+					<div class="select-city pull-left">
+						<input type="text" value="南京市[选择城市]" size="15" id="getcity_name" name="getcity_name" mod="address|notice" mod_address_source="hotel" mod_address_suggest="@Beijing|北京|53@Shanghai|上海|321@Shenzhen|深圳|91@Guangzhou|广州|80@Qingdao|青岛|292@Chengdu|成都|324@Hangzhou|杭州|383@Wuhan|武汉|192@Tianjin|天津|343@Dalian|大连|248@Xiamen|厦门|61@Chongqing|重庆|394@" mod_address_reference="getcityid" />
+						<input id="getcityid" name="getcityid" type="hidden" value="{$getcityid}" />
+					</div>
+					<div id="jsContainer" class="jsContainer" style="height:0">
+					    <div id="tuna_alert" style="display:none;position:absolute;z-index:999;overflow:hidden;"></div>
+					    <div id="tuna_jmpinfo" style="visibility:hidden;position:absolute;z-index:120;"></div>
+					</div>
+					<div class="top-login pull-left"><span class="cutline">|</span>欢迎来到极成，请<a data-toggle="modal" href="#myModal">登录</a>/<a data-toggle="modal" href="#myModalRegister">免费注册</a></div>
+				</div>
+				<div class="top-center-right pull-right">
+					<a href="#">我的订单</a>
+					<a href="#">购物车</a>				
+					<a href="#" class="myaccount-btn">我的账户</a>
+					<div class="myaccount-content">						
+						<span class="bot"></span>  
+						<span class="top"></span>  
+						<a href="#">消息中心</a>
+						<a href="#">我的订单</a>
+						<a href="#">企业入驻</a>
+						<a href="#">网站帮助</a>						
+					</div>
+				</div>
+			</div>
+			<div class="search-box clearfix">
+				<select class="bs-select form-control">
+					<option>商品</option>
+					<option>店铺</option>
+				</select>  
+				<input type="text" placeholder="输入搜索内容" />
+				<button class="btn search-btn">搜索</button>
+			</div>
+		</div>
+		<div class="top-right pull-left">
+			<div class="code-box pull-left text-center">
+				<img src="../images/code.png" />
+				<p>关注微信</p>
+			</div>
+			<div class="code-box pull-right text-center">
+				<img src="../images/code.png" />
+				<p>扫码下载APP</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="menu-section">
+		<ul class="container clearfix">
+			<li>
+				<a href="/" class="red-text">首页</a>
+			</li>
+			<li>
+				<a href="index02.html" class="sub-menu-btn">服装服饰定制商城</a>
+				<ul class="sub-menu">
+					<li class="container">
+						<ul>
+							<li><a href="#">男装</a></li>
+							<li><a href="#">女装</a></li>
+					        <li><a href="#">中老年</a></li>
+					        <li><a href="#">童装</a></li>
+						</ul>						
+					</li>					
+				</ul>
+			</li>
+			<li><a href="#">家具家装定制商城</a></li>
+			<li><a href="#">智能电器定制商城</a></li>
+			<li><a href="#">企业定制服务</a></li>
+			<li><a href="#">质量公告</a></li>
+			<li><a href="#">新闻资讯</a></li>
+		</ul>		
+</div>
+<div class="main-content">
+	<div class="container">
+		<div class="account">
+			<span class="pull-left">极成定制商城</span>
+			<img src="../images/arrow.png" alt="">
+			<span class="pull-left">新闻资讯</span>
+			<img src="../images/arrow.png" alt="">
+			<span class="pull-left">国内热点</span>
+			<img src="../images/arrow.png" alt="">
+			<em pull-left>新时代·新作为·新篇章：慕祺定制让更多人受益...</em>
+		</div>
+		<div class="accout-content clearfix">
+			<div class="content-left pull-left">
+				<ul class="toptic">
+					<li><a href="#">集团新闻</a></li>
+					<li class="active"><a href="#">国内热点</a></li>
+					<li><a href="#">社会新闻</a></li>
+					<li><a href="#">业内资讯</a></li>
+					<li><a href="#">科技圈</a></li>
+					<li><a href="#">互联网</a></li>
+					<li><a href="#">新闻分类</a></li>
+					<li><a href="#">新闻分类</a></li>
+					<li><a href="#">新闻分类</a></li>
+					<li><a href="#">新闻分类</a></li>
+					<li><a href="#">新闻分类</a></li>
+					<li><a href="#">新闻分类</a></li>
+					<li><a href="#">新闻分类</a></li>
+				</ul>
+			</div>
+			<div class="toptic-news pull-left">
+				<div class="toptic-hd">
+					<h2>新时代·新作为·新篇章：慕祺定制让更多人受益</h2>
+					<p>#关键字##关键字关键字关键字关键字关键字##关键字关键字关键字关键字关键字关键字#</p>
+				</div>
+				<div class="toptic-main">
+					<p>2017年年初，中共中央办公厅、国务院办公厅出台支持民主党派中央开展重点考察调研的意见，这是历史上首次对民主党派重点考察调研工作出台规范性文件。</p>
+					<p>根据惯例，大调研一般由民主党派中央主要负责同志带队，民主党派专家学者以及中央、国家机关有关部门负责同志组成调研组。</p>
+					<p>比如，郝明金的上海调研，国家发改委经济贸易司副司长寇明，财政部综合司副司长欧阳宗书，交通运输部水运局副局长易继勇，商务部外资司国际合作处处长唐颂是调研组成员。一次调研，四个部委派员参加。</p>
+					<p>比如，郝明金的上海调研，国家发改委经济贸易司副司长寇明，财政部综合司副司长欧阳宗书，交通运输部水运局副局长易继勇，商务部外资司国际合作处处长唐颂是调研组成员。一次调研，四个部委派员参加。</p>
+					<p>民主党派中央主席多由副国级兼任，所以他们带队调研，一般规格都很高，每到一地，当地党政主官都会与之面谈，显示对此的支持和重视。</p>
+					<p>脱贫攻坚民主监督</p>
+					<p>开展脱贫攻坚民主监督工作调研。在这里插播一条关于丁仲礼的新闻。他从2014年4月开始兼任中国科学院大学校长。直到5月8日，晋升副国级半年后，才卸任这个重要的兼职。在校长任上，他说过很多“耿直”的话，例如“不怕难的来国科大，急功近利的不要来”；“国科大没进‘双一流’不太合理”，等等。说回脱贫攻坚民主监督，这是民主党派2016年开始的一项工作。首先，这是中央赋予各民主党派的一项使命，是中央调动各方力量打赢脱贫攻坚战的一项举措。另外，这是党派首次对国家重大战略决策进行专项监督，是对“民主监督”在新时代下的全新探索。</p>
+					<p>目前，至少还有九三学社中央和民建中央也进行了这项调研工作。</p>
+					<p>国家发展的“大热点”</p>
+					<p>经济社会发展的“大热点”，也是民主党派中央调研的主题之一今年全国两会，中小学生课外负担重是热点议题。两会结束之后，4月17日、24日，全国政协副主席、民盟中央常务副主席陈晓光率全国政协教科卫体委员会“解决中小学生课外负担重问题”专题调研组先后在北京、湖南调研出台实施粤港澳大湾区发展规划纲要，写入2018年政府工作报告。民革中央的调研选中大湾区。4月22日至23日，全国人大常委会副委员长、民革中央主席万鄂湘就率民革中央调研组赴广东广州，就“粤港澳大湾区金融合作”主题开展调研。</p>
+				</div>	
+				<div class="toptic-tips clearfix">
+					<p class="pull-left">新闻来源:凤凰新闻社</p>
+					<div class="toptic-txt pull-right">
+						<div class="toptic-num pull-left"><img src="../images/person_icon01.png"><span>9999</span></div>
+						<p class="pull-left">2018-03-15</p>
+					</div>	
+				</div>	
+			</div>
+
+		</div>		
+	</div>
+</div>
+<div class="bottom-section01">
+	<div class="container clearfix">
+		<div class="icon-text pull-left"><img src="../images/bottom_logo_pic.png" /></div>
+		<div class="pull-left icon-box-right">
+			<div class="icon-box pull-left clearfix">
+				<img src="../images/bottom_icon01.png" class="pull-left" />
+				<h1 class="pull-left"><span>安全</span><p>专业团队 安全省心</p></h1>
+			</div>
+			<div class="icon-box pull-left clearfix">
+				<img src="../images/bottom_icon02.png" class="pull-left" />
+				<h1 class="pull-left"><span>省钱</span><p>大牌直供 优选好物</p></h1>
+			</div>
+			<div class="icon-box pull-left clearfix">
+				<img src="../images/bottom_icon03.png" class="pull-left" />
+				<h1 class="pull-left"><span>方便</span><p>快捷高效 一键购物</p></h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bottom-section02">
+	<div class="container clearfix">
+		<div class="left-menu pull-left">
+			<div class="left-menu-list pull-left">
+				<h1>购物指南</h1>
+				<a href="#">购物流程</a>
+				<a href="#">用户协议</a>
+				<a href="#">会员规则</a>
+				<a href="#">订单状态</a>
+				<a href="#">常见问题</a>				
+			</div>
+			<div class="left-menu-list pull-left">
+				<h1>配送方式</h1>
+				<a href="#">快捷服务</a>
+				<a href="#">物流配送</a>
+				<a href="#">上门服务</a>
+				<a href="#">门店自取</a>			
+			</div>
+			<div class="left-menu-list pull-left">
+				<h1>支付方式</h1>
+				<a href="#">货到付款</a>
+				<a href="#">在线支付</a>
+				<a href="#">银行转账</a>
+				<a href="#">支票付款</a>			
+			</div>
+			<div class="left-menu-list pull-left">
+				<h1>售后服务</h1>
+				<a href="#">接收验货</a>
+				<a href="#">申请退款</a>
+				<a href="#">退换货规则</a>			
+			</div>
+		</div>
+		<div class="right-tel pull-right">
+			<div class="tel-box clearfix">
+				<h2 class="pull-left"><img src="../images/bottom_icon04.png" /></h2>
+				<h1 class="pull-left"><span>加盟热线(固话)</span><span>400-123-6789</span></h1>
+			</div>
+			<div class="tel-box clearfix">
+				<h2 class="pull-left"><img src="../images/bottom_icon05.png" /></h2>
+				<h1 class="pull-left">
+					<span>招商热线(手机)</span>
+					<span>曾先生：13998986666</span>
+					<span>朱先生：13998986666</span>
+					<span>朱先生：13998986666</span>
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bottom-section03">
+	<div class="container bottom-menu clearfix">
+		<a href="#">关于我们</a>
+		<span>|</span>
+		<a href="#">联系我们</a>
+		<span>|</span>
+		<a href="#">联系客服</a>
+		<span>|</span>
+		<a href="#">合作招商</a>
+		<span>|</span>
+		<a href="#">商家帮助</a>
+		<span>|</span>
+		<a href="#">友情链接</a>
+		<span>|</span>
+		<a href="#">商家入驻</a>
+	</div>
+	<p><span>增值电信业务经营许可证：浙 B2-20080224</span><span>互联网违法和不良信息举报电话：0571-81683755</span></p>
+	<p>Copyright © 2018-2047 极成定制商城版权所有 保留一切权利 ICP备案号：苏02-12345678号</p>
+	<p>公司地址：江苏省秦淮区弓箭坊020号</p>
+	<div class="link-img">
+		<div class="container text-center">
+			<a href="#"><img src="../images/bottom_link_pic01.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic02.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic03.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic04.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic05.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic06.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic07.png" /></a>
+			<a href="#"><img src="../images/bottom_link_pic08.png" /></a>
+		</div>
+	</div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/top_menu.js"></script>
+<!--下拉菜单-->
+<script src="../js/app.min.js"></script>
+<script src="../js/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="../js/components-bootstrap-select.min.js" type="text/javascript"></script>
+<!--下拉菜单-->
+<!--城市选择插件-->
+<script type="text/javascript" src="../js/fixdiv.js"></script>
+<script type="text/javascript" src="../js/address.js"></script>
+<!--城市选择插件-->
+</body>
+</html>
