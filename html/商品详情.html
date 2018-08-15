@@ -321,7 +321,7 @@
                                                                   aria-expanded="true">商品介绍</a></li>
                         <li role="presentation"><a href="#tab02" role="tab" id="profile-tab" data-toggle="tab"
                                                    aria-controls="profile">规格及包装</a></li>
-                        <li role="presentation"><a href="#tab03" role="tab" id="profile-tab" data-toggle="tab"
+                        <li role="presentation"><a href="#tab03" role="tab" data-toggle="tab"
                                                    aria-controls="tab03">评价（999+）</a></li>
                     </ul>
                     <div id="myTabContent" class="tab-content">
@@ -896,7 +896,8 @@
         content: "";
         display: inline-block;
         width: 20px;
-        height: 20px;border-width: 2px 2px 0 0;
+        height: 20px;
+        border-width: 2px 2px 0 0;
         border-color: #c8c8cd;
         border-style: solid;
         transform: rotate(-135deg);
@@ -916,7 +917,8 @@
         content: "";
         display: inline-block;
         width: 20px;
-        height: 20px;border-width: 2px 2px 0 0;
+        height: 20px;
+        border-width: 2px 2px 0 0;
         border-color: #c8c8cd;
         border-style: solid;
         transform: rotate(45deg);
@@ -927,18 +929,34 @@
 <script type="text/javascript">
     $(function () {
         var item = $('.des-small')
-        item.each(function (index) {
-            if (index < 4) {
-                $(this).show()
-            } else {
-                $(this).hide()
-            }
-        })
-        $('.ctrl-next').on('click',function () {
-            if(item.length<5){
+        var i = 0
+        showItems(i)
+
+        function showItems(num) {
+            item.each(function (index) {
+                if (index < num || index >= num + 4) {
+                    $(this).hide()
+                } else {
+                    $(this).show()
+                }
+            })
+        }
+
+        $('.ctrl-next').on('click', function () {
+            if (item.length < 5 || item.length <= i + 4) {
                 return false
             } else {
-                item.find('')
+                i++
+                showItems(i)
+            }
+        })
+
+        $('.ctrl-prev').on('click', function () {
+            if (item.length < 5 || i <= 0) {
+                return false
+            } else {
+                i--
+                showItems(i)
             }
         })
     })
