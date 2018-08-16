@@ -66,7 +66,7 @@
                 <div class="mySearch">
                     <div class="input-group">
                         <input type="text" class="form-control" id="testNoBtn" placeholder="输入搜索内容">
-                        <div class="input-group-btn" style="width: 0">
+                        <div class="input-group-btn">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                 <span class="caret"></span>
                             </button>
@@ -844,9 +844,13 @@
     .mySearch input {
         margin: 0;
         border: none;
-        border-radius: 0!important;
+        border-radius: 0 !important;
         padding: 8px 15px;
         height: 36px;
+    }
+
+    .mySearch .input-group-btn {
+        width: 0;
     }
 </style>
 <script src="../js/bootstrap-suggest/bootstrap-suggest.min.js" type="text/javascript"></script>
@@ -855,7 +859,7 @@
         url: "/rest/sys/getuserlist?keyword=",
         clearable: true, //可清除已输入内容
         ignorecase: true, //忽略大小写
-        effectiveFieldsAlias:{userName: "姓名"}, //有效字段别名
+        effectiveFieldsAlias: {userName: "姓名"}, //有效字段别名
         showHeader: true, //显示 header
         showBtn: false, //不显示下拉按钮
         delayUntilKeyup: true //获取数据方式为 firstByUrl 时，延迟到有输入/获取到焦点时请求
