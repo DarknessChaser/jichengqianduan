@@ -165,9 +165,9 @@ span.red-label{position: absolute;font-size: 12px;z-index:99;color:#ee3e3e;borde
 .shopping-total>div>a{width:150px;color:#fff;background: #e60000;text-align: center;float:right;font-size: 22px;line-height: 70px;}
 .product-info{text-align: left !important;width:380px;}
 td>.table{margin-bottom: 0;}
-.fileinput.fileinput-new,.fileinput.fileinput-exists{position: relative;width:281px !important;height:161px !important;}
-.upload-pic-box{position: absolute !important;top:-4px;left:0;width:100%;height:166px;border:2px dashed #ddd;margin-top:1px }
-.fileinput .thumbnail{width:281px !important;height:161px !important;margin-bottom: 0;}
+.fileinput.fileinput-new,.fileinput.fileinput-exists{position: relative;width:211px !important;height:121px !important;}
+.upload-pic-box{position: absolute !important;top:-4px;left:0;width:100%;height:126px;border:2px dashed #ddd;margin-top:1px }
+.fileinput .thumbnail{width:211px !important;height:121px !important;margin-bottom: 0;}
 span.btn-outline.btn-file{position: absolute;bottom:0;left:0;width:100%;background: rgba(0,0,0,.5);color:#fff;line-height: 3;border-radius: 0;}
 .upload-pic-box .btn{padding:0;border:none;}
 .upload-pic-box input[type=file]{display: block;}
@@ -2219,7 +2219,7 @@ li{margin:0;list-style: none;}
 .main-top-have{font-size:14px;color:#242424;margin:0;line-height:30px;}
 .main-top-group{margin:0 0 0 10px;line-height:30px;max-width: calc(100% - 200px);}
 .main-top-option{padding:8px 24px;background:white;margin:0 10px 10px 0;line-height:1;}
-.main-top-title{font-weight:normal;font-size:14px color:#242424;font-size:14px;}
+.main-top-title{font-weight:normal;color:#242424;font-size:14px;}
 .main-top-mate{margin:0 0 0 9px;font-style:normal;font-size:14px;color:#e81111;}
 .main-top-all{margin:0;font-size:14px;color:#404040;line-height:30px;}
 .main-top-space{display:inline-block;margin:0 5px 0 4px;}
@@ -2418,7 +2418,7 @@ input[type=file]{display: none;}
 .main-design .nav-tabs>li{min-width: 150px;text-align: center;}
 .main-design .nav-tabs>li a{color:#242424;}
 .design-tabs{background:#f7f7f7;height:50px;border-bottom:0;}
-.design-tabs > li>a{height:50px; border-right:1px solid #dcdcdc;font-size:16px color:#242424;line-height:30px;}
+.design-tabs > li>a{height:50px; border-right:1px solid #dcdcdc;font-size:16px;color:#242424;line-height:30px;}
 .design-tabs > li.active > a,.design-tabs > li.active > a:hover,.design-tabs > li.active > a:focus {color: #e60000;border: 0;}
 /*全部商品样式结束*/	
 .main-new-dress{padding:8px 0 8px 99px;border-left:1px solid #dcdcdc;margin-top:28px;}
