@@ -244,7 +244,7 @@
                                 <label for="">短信验证码：</label><input type="text" value="123654" placeholder="请输入短信验证码" style="width: 180px"><input type="button" value="获取验证码" style="width: 120px;">
                             </li>
                         </ul>
-                        <button class="main-user-btn">提交</button>
+                        <button class="main-user-btn" data-toggle="modal" data-target="#myModal">提交</button>
                         <div class="text-center agree-protocol"><input class="agree-checkbox" type="checkbox"><span>提交注册视为已同意《慕祺定制入驻商家注册协议》</span></div>
                     </div>
 
@@ -356,6 +356,23 @@
         </div>
     </div>
 </div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+            </div>
+            <div class="modal-body">
+                <img class="center-block" src="../images/img_modal.png">
+                <p class="text-center">感谢您对慕祺定制的信任，请稍等！</p>
+                <p class="agree-protocol text-center">有任何疑问请联系我们<span class="red-text">400-888888</span></p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/top_menu.js"></script>
